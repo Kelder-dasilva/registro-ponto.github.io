@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: linear-gradient(to right,rgb(72, 145, 255), rgb(184, 184, 184),rgba(72, 145, 255));
+}
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(109, 109, 109) rgb(255, 255, 255);
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: blue;
+    border-radius: 20px;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+/* Navbar */
+.navbar{
+    background-image: linear-gradient(to right,rgb(184, 184, 184), rgb(72, 145, 255),rgba(184, 184, 184));
+    width: auto;
+}
+.title{
+    display: flex;
+    width: auto;
+    justify-content: end;
+    font-family: Arial;
+}
+#lblAtualizando{
+    text-align: center;
+    font-family: Arial;
+}
+#btnRecarregar{
+    width: 6%;
+    font-family: Arial;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 14%;
+}
+
+/* Cards-Info */
+.divPai{
+    position: relative;
+}
+.FundoDash{
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    height: auto;
+}
+.cardEsquer{
+    width: 100%;
+    min-width: 100px;
+    height: auto;
+    margin: auto;
+}
+.cardMeio{
+    width: 100%;
+    min-width: 100px;
+    height: auto;
+    margin: auto;
+}
+.cardDireito{
+    width: 100%;
+    min-width: 100px;
+    height: auto;
+    margin: auto;
+}
+.FundoDash > div{
+    background-color: #ffffff;
+    border: thin solid rgb(131, 131, 131);
+    box-shadow: 2px 2px 3px rgb(104, 104, 104);
+    margin-top: 8px;
+    width: 98%;
+    height: 160px;
+    margin-left: 1%;
+    margin-right: 0.8%;
+    padding: 0px 0px 22px 0px;
+    border-radius: 12px;
+}
+.TituloDash{
+    font-size: 12pt;
+    color: rgba(255, 253, 253, 0.918);
+    font-weight: bold;
+    background-color: rgba(13, 66, 146, 0.877);
+    padding: 6px 1px 1px 10px;
+    border-radius: 9px 9px 0px 0px;
+    height: 20px;
+    width: auto;
+    min-width: 140px;
+    font-family: Arial;
+}
+.tabela{
+    overflow: auto; 
+    overflow-y: scroll; 
+    height: 90%;
+    width: 100%;
+    min-width: 140px;
+    border-collapse: collapse;
+    flex-direction: column;
+    font-size: 11px;  
+    font-family: Arial;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 101, 252) rgb(255, 255, 255);
+}
+table th{
+    background-color:hsl(0, 0%, 20%);
+    font-size: 14px;
+	color: rgb(255, 255, 255);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+
+}
+table td{
+   color: rgb(0, 0, 0);
+   font-size: 9pt; 
+   font-family: arial;
+   background-color: #ffffffaf;
+   border: 1px solid black;
+}
+table th, table td {
+    width: 100%;
+    min-width: 110px;
+    margin:  0 0;
+    border-collapse: collapse;
+    border-left: 1px solid black;
+}
+.tabela tbody tr{ 
+    background-color:#fdfdfd;
+    font-size: 8pt; 
+}
+.tabela tbody tr:nth-child(even){
+    background-color:#a1a1a1;
+}
+.center {
+    text-align: center;
+}
+
+/* Tabela Js */
+#tabela1, #tabela2, #tabela3, #tabela4, #tabela5, #tabela6, #tabela7, #tabela8, #tabela9{
+    width: 100%;
+}
+#reload1, #reload2, #reload3, #reload4, #reload5, #reload6, #reload7, #reload8, #reload9{
+    transform: translate(0%, 100%);
+    justify-content: center;
+    font-size: 16pt; 
+    color: black;
+    font-family: Arial;
+}
+#lbNaoTem1, #lbNaoTem2, #lbNaoTem3, #lbNaoTem4, #lbNaoTem5, #lbNaoTem6, #lbNaoTem7, #lbNaoTem8, #lbNaoTem9{
+    transform: translate(0%, 100%);
+    justify-content: center;
+    font-size: 15pt; 
+    color: black;
+    font-family: Arial;
+    display: none;
+}
+
+/* Spinner */
+.spinner{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 46%;
+}
+.spinner::before, .spinner:after{
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+}
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, #16419c 0%, #afdaf7 50%);
+    animation: spin .5s infinite linear;            
+}
+.spinner:after {
+    width: 85%;
+    height: 85%;
+    background-color: #fff8f8;
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsividade */
+@media only screen and (width: 480px){
+    .navbar{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    .title{
+        width: auto;
+        margin: auto;
+        height: auto;
+        font-size: clamp(0.5em, 0.5em + 1vw, 1em);  
+    }
+    #btnRecarregar{
+        width: 6%;
+        font-family: Arial;
+        justify-content: center;
+        display: flex;
+        justify-content: center;
+        margin-left: 14%;
+    }
+    .FundoDash > div{
+        width: 100%;
+    }
+    .divPai{
+        flex-wrap: wrap;
+        width: auto;
+        margin: auto;
+    }
+    .cardDireito{
+        width: 98%;
+    }
+    .cardMeio{
+        width: 98%;
+    }
+    .cardEsquer{
+        width: 98%;
+    }
+    .tabela{
+        font-size: clamp(0.5em, 0.5em + 1vw, 1em);
+        width: auto;
+        height: 90%;
+        margin: 0 0;
+    }
+    #tabela1, #tabela2, #tabela3, #tabela4, #tabela5, #tabela6, #tabela7, #tabela8, #tabela9{
+        font-size: clamp(0.5em, 0.5em + 1vw, 1em);
+        width: auto;
+        height: 90%;
+        margin: 0 0;
+    }
+    .TituloDash{
+        width: auto;
+    }
+    th{
+        font-size: 10pt;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .navbar{
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+    .title{
+        width: 100%;
+        font-size: clamp(0.5em, 0.5em + 1vw, 1em);
+    }
+    #btnRecarregar{
+        width: 6%;
+        font-family: Arial;
+        justify-content: center;
+        display: flex;
+        justify-content: center;
+        margin-left: 14%;
+    }
+    .FundoDash > div{
+        width: 100%;
+        margin: 0 0;
+        margin-left: 1%;
+        margin-top: 1.6%;
+    }
+    .divPai{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .cardDireito{
+        width: 98%;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .cardMeio{
+        width: 98%;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .cardEsquer{
+        width: 98%;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .tabela{
+        font-size: clamp(0.5em, 0.5em + 1vw, 1em);
+        width: auto;
+        height: 90%;
+        margin: auto;
+    }
+    #tabela1, #tabela2, #tabela3, #tabela4, #tabela5, #tabela6, #tabela7, #tabela8, #tabela9{
+        font-size: clamp(0.5em, 0.5em + 1vw, 1em);
+        width: 100%;
+        height: 90%;
+        margin: auto;
+    }
+    .TituloDash{
+        width: auto;
+    }
+}
